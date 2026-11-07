@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Learning Portal — Module Topics</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f4f6f4;
+            --bg-sidebar: #0a2f1d;
+            --bg-sidebar-hover: #123f28;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --primary: #064e3b;
+            --primary-hover: #022c22;
+            --border-color: #d1d5db;
+            --border-light: #e5e7eb;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; border-radius: 0 !important; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg-secondary); color: var(--text-main); line-height: 1.5; }
+        .app-layout { display: flex; width: 100%; height: 100vh; overflow: hidden; }
+        .sidebar { width: 260px; background: var(--bg-sidebar); color: #ffffff; display: flex; flex-direction: column; border-right: 1px solid #062314; flex-shrink: 0; }
+        .sidebar-brand { padding: 1.5rem 1.25rem; font-size: 1.1rem; font-weight: 700; border-bottom: 1px solid #123f28; display: flex; align-items: center; gap: 0.75rem; background: #082818; }
+        .sidebar-nav { padding: 1rem 0; flex: 1; overflow-y: auto; }
+        .nav-item { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.25rem; color: #d1d5db; text-decoration: none; font-size: 0.9rem; font-weight: 500; border-left: 3px solid transparent; }
+        .nav-item:hover { background: var(--bg-sidebar-hover); color: #ffffff; }
+        .nav-item.active { background: var(--bg-sidebar-hover); color: #ffffff; border-left-color: #34d399; font-weight: 600; }
+        .nav-left { display: flex; align-items: center; gap: 0.75rem; }
+        .coming-soon-badge { font-size: 0.65rem; background: #123f28; color: #9ca3af; padding: 0.125rem 0.375rem; border: 1px solid #1e5638; text-transform: uppercase; }
+        .main-content { flex: 1; display: flex; flex-direction: column; background: var(--bg-secondary); overflow-y: auto; }
+        .topbar { height: 60px; background: var(--bg-primary); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; flex-shrink: 0; }
+        .topbar-title { font-size: 1rem; font-weight: 600; color: var(--primary); }
+        .content-body { padding: 2rem; max-width: 1000px; width: 100%; margin: 0 auto; }
+
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--primary); text-decoration: none; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+
+        .module-header-box { background: var(--bg-primary); border: 1px solid var(--border-color); padding: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--primary); }
+        .module-header-box h1 { font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .module-header-box p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
+        .source-attribution { font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border-light); padding-top: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+
+        .topics-list { display: flex; flex-direction: column; gap: 1rem; }
+        .topic-row { background: var(--bg-primary); border: 1px solid var(--border-color); padding: 1.5rem; text-decoration: none; color: inherit; display: flex; justify-content: space-between; align-items: center; transition: border-color 0.15s; }
+        .topic-row:hover { border-color: var(--primary); }
+        .topic-row h3 { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 0.25rem; }
+        .topic-row p { font-size: 0.875rem; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i data-lucide="activity" style="width: 20px; height: 20px; color: #34d399;"></i>
+                <span>ECG Platform</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a class="nav-item" href="/">
+                    <div class="nav-left"><i data-lucide="home" style="width: 18px; height: 18px;"></i><span>Home</span></div>
+                </a>
+                <a class="nav-item" href="/analyzer.html">
+                    <div class="nav-left"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i><span>ECG Analyzer</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+                <a class="nav-item" href="/quiz.html">
+                    <div class="nav-left"><i data-lucide="help-circle" style="width: 18px; height: 18px;"></i><span>ECG Quiz</span></div>
+                </a>
+                <a class="nav-item" href="/flashcards.html">
+                    <div class="nav-left"><i data-lucide="layers" style="width: 18px; height: 18px;"></i><span>Flashcards</span></div>
+                </a>
+                <a class="nav-item" href="/upload.html">
+                    <div class="nav-left"><i data-lucide="upload-cloud" style="width: 18px; height: 18px;"></i><span>ECG Image Upload</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+                <a class="nav-item active" href="/resources.html">
+                    <div class="nav-left"><i data-lucide="book-open" style="width: 18px; height: 18px;"></i><span>Learning Resources</span></div>
+                </a>
+                <a class="nav-item" href="/history.html">
+                    <div class="nav-left"><i data-lucide="clock" style="width: 18px; height: 18px;"></i><span>ECG History</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+                <a class="nav-item" href="/performance.html">
+                    <div class="nav-left"><i data-lucide="bar-chart-2" style="width: 18px; height: 18px;"></i><span>Progress & Performance</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+                <a class="nav-item" href="/profile.html">
+                    <div class="nav-left"><i data-lucide="user" style="width: 18px; height: 18px;"></i><span>Profile</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+                <a class="nav-item" href="/settings.html">
+                    <div class="nav-left"><i data-lucide="settings" style="width: 18px; height: 18px;"></i><span>Settings</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-title" id="topbar-module-title">Module Overview</div>
+                <div style="font-size: 0.875rem; color: var(--text-muted);">Institutional Educational Library</div>
+            </header>
+
+            <div class="content-body">
+                <a href="/resources.html" class="back-link"><i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i> Back to Learning Resources</a>
+
+                <div class="module-header-box" id="module-header">
+                    <h1 id="mod-title">Loading Module...</h1>
+                    <p id="mod-desc"></p>
+                    <div class="source-attribution" id="mod-source"></div>
+                </div>
+
+                <div style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">Module Topics</div>
+                <div class="topics-list" id="topics-list">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        async function loadModuleDetail() {
+            const params = new URLSearchParams(window.location.search);
+            const moduleId = params.get('id');
+
+            try {
+                const res = await fetch('learning_resources.json');
+                const modules = await res.json();
+                const moduleObj = modules.find(m => m.id === moduleId);
+
+                if (!moduleObj) {
+                    document.getElementById('mod-title').innerText = "Module Not Found";
+                    document.getElementById('mod-desc').innerText = "The requested learning module could not be located.";
+                    return;
+                }
+
+                document.getElementById('topbar-title').innerText = moduleObj.title;
+                document.getElementById('mod-title').innerText = moduleObj.title;
+                document.getElementById('mod-desc').innerText = moduleObj.description;
+                document.getElementById('mod-source').innerHTML = `<i data-lucide="book" style="width: 14px; height: 14px;"></i> <span><strong>Source Attribution:</strong> ${moduleObj.source}</span>`;
+
+                const list = document.getElementById('topics-list');
+                list.innerHTML = '';
+
+                moduleObj.topics.forEach((t, idx) => {
+                    const row = document.createElement('a');
+                    row.className = 'topic-row';
+                    row.href = `/topic.html?mod=${moduleObj.id}&topic=${t.id}`;
+                    row.innerHTML = `
+                        <div style="max-width: 80%;">
+                            <h3>${idx + 1}. ${t.title}</h3>
+                            <p>${t.summary}</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); font-weight: 600; font-size: 0.875rem; flex-shrink: 0;">
+                            Read Topic <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                        </div>
+                    `;
+                    list.appendChild(row);
+                });
+                lucide.createIcons();
+            } catch (err) {
+                console.error("Failed to load module details:", err);
+            }
+        }
+
+        loadModuleDetail();
+    </script>
+</body>
+</html>

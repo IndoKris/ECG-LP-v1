@@ -1,0 +1,240 @@
+[
+  {
+    "id": "module-1",
+    "title": "ECG Fundamentals",
+    "description": "Introduction, clinical applications, historical context, and biophysical working principles of electrocardiography.",
+    "level": "Beginner",
+    "topicsCount": 4,
+    "source": "Wikipedia: https://en.wikipedia.org/wiki/Electrocardiography",
+    "topics": [
+      {
+        "id": "m1-t1",
+        "title": "Introduction to Electrocardiography",
+        "summary": "An electrocardiogram (ECG or EKG) is a non-invasive test that records the electrical activity of the heart over a period of time using electrodes placed on the skin.",
+        "content": "Electrocardiography is one of the most vital diagnostic modalities in modern medicine. By detecting tiny electrical changes on the skin that arise from the heart muscle's electrophysiologic depolarization during each heartbeat, clinicians can evaluate cardiac rhythm, diagnose ischemia, and detect electrolyte disturbances.\n\n### Clinical Utility\n- **Arrhythmia Detection:** Identifying abnormal heart rhythms (tachycardias, bradycardias, atrial fibrillation).\n- **Ischemia & Infarction:** Recognizing acute coronary syndromes and myocardial damage.\n- **Structural Assessment:** Evaluating chamber enlargement and hypertrophy."
+      },
+      {
+        "id": "m1-t2",
+        "title": "Historical Context & Development",
+        "summary": "From Waller's capillary electrometer to Willem Einthoven's string galvanometer and Nobel Prize.",
+        "content": "The foundations of electrocardiography were laid in the late 19th and early 20th centuries.\n\n### Milestones\n- **1887:** Augustus Waller used a Lippmann capillary electrometer to record the first human ECG.\n- **1901:** Willem Einthoven invented the string galvanometer, greatly improving signal fidelity and introducing the standard nomenclature (P, Q, R, S, T waves).\n- **1924:** Einthoven was awarded the Nobel Prize in Physiology or Medicine for his discovery."
+      },
+      {
+        "id": "m1-t3",
+        "title": "Biophysical Working Principles",
+        "summary": "How cardiac muscle action potentials project electrical potentials to body surface electrodes.",
+        "content": "The heart acts as a biological generator producing ionic currents across myocardial cell membranes. During depolarization, positively charged ions (sodium and calcium) rush into cardiac myocytes, creating a voltage gradient.\n\n### Volume Conduction\nBody tissues act as a volume conductor. Electrodes placed on the limbs and chest record the resultant vector sum of these millions of simultaneous cellular action potentials."
+      },
+      {
+        "id": "m1-t4",
+        "title": "Clinical Applications & Limitations",
+        "summary": "Understanding when ECG is diagnostic versus when it requires corroborating imaging or biomarkers.",
+        "content": "While highly sensitive for rhythm abnormalities and acute injury currents, standard 12-lead ECGs provide a static snapshot in time. Transient arrhythmias or intermittent ischemia may not manifest during a routine resting recording, necessitating continuous Holter monitoring or ambulatory telemetry."
+      }
+    ]
+  },
+  {
+    "id": "module-2",
+    "title": "Cardiac Electrical Activity",
+    "description": "Conduction system, SA/AV nodes, Bundle of His, Purkinje fibres, depolarization and repolarization.",
+    "level": "Intermediate",
+    "topicsCount": 4,
+    "source": "Wikipedia & ResearchGate Electrophysiology Literature",
+    "topics": [
+      {
+        "id": "m2-t1",
+        "title": "The Intrinsic Conduction System",
+        "summary": "Overview of the specialized neuromuscular tissues responsible for coordinated cardiac contraction.",
+        "content": "The heart possesses an intrinsic pacemaker and conduction network that ensures atrial contraction precedes ventricular contraction in a synchronized fashion.\n\n### Key Components\n1. **Sinoatrial (SA) Node:** Primary pacemaker located in the right atrium.\n2. **Atrioventricular (AV) Node:** Delays impulse transmission to allow ventricular filling.\n3. **Bundle of His & Branches:** Rapidly transmits impulses down the interventricular septum.\n4. **Purkinje Fibers:** Distributes excitation throughout the ventricular myocardium."
+      },
+      {
+        "id": "m2-t2",
+        "title": "SA and AV Node Physiology",
+        "summary": "Automaticity, pacemaker potentials, and the physiological delay at the AV junction.",
+        "content": "The SA node spontaneously depolarizes faster than any other region (60-100 beats per minute). The AV node introduces a critical 0.1-second delay, ensuring the atria fully empty their blood volume into the ventricles before ventricular systole begins."
+      },
+      {
+        "id": "m2-t3",
+        "title": "Cellular Depolarization & Repolarization",
+        "summary": "Ion channels (Na+, K+, Ca2+) and transmembrane action potential phases.",
+        "content": "Cardiac action potentials consist of 5 distinct phases (Phase 0 to Phase 4):\n- **Phase 0:** Rapid depolarization via fast sodium channels.\n- **Phase 1 & 2:** Initial repolarization and calcium plateau.\n- **Phase 3:** Rapid repolarization via potassium efflux.\n- **Phase 4:** Resting membrane potential."
+      },
+      {
+        "id": "m2-t4",
+        "title": "Propagation Vector Analysis",
+        "summary": "How electrical wave fronts traveling toward or away from positive electrodes generate positive or negative deflection waves.",
+        "content": "When a wave of depolarization moves toward a positive recording electrode, an upward (positive) deflection is inscribed on the ECG trace. Movement away produces a downward deflection."
+      }
+    ]
+  },
+  {
+    "id": "module-3",
+    "title": "ECG Waveforms & Intervals",
+    "description": "P wave, QRS complex, T wave, PR interval, ST segment, QT interval, and normal physiological ranges.",
+    "level": "Beginner",
+    "topicsCount": 4,
+    "source": "ResearchGate: Electrocardiography Waveform Standards",
+    "topics": [
+      {
+        "id": "m3-t1",
+        "title": "Atrial Activity: The P Wave",
+        "summary": "Morphology and duration of right and left atrial depolarization.",
+        "content": "The P wave represents atrial depolarization. Normal duration is under 120 ms, and amplitude is typically under 2.5 mm in limb leads. Abnormalities often signify atrial enlargement (e.g., P mitrale or P pulmonale)."
+      },
+      {
+        "id": "m3-t2",
+        "title": "Ventricular Activation: QRS Complex",
+        "summary": "Q wave, R wave, S wave deflections and rapid ventricular depolarization.",
+        "content": "The QRS complex represents rapid ventricular depolarization. Normal duration is narrow (under 120 ms or 3 small boxes). Widening indicates bundle branch blocks or ventricular conduction delays."
+      },
+      {
+        "id": "m3-t3",
+        "title": "Ventricular Recovery: ST Segment & T Wave",
+        "summary": "Repolarization phase, J-point, and ST elevation/depression significance.",
+        "content": "The ST segment represents early ventricular repolarization, and the T wave represents rapid ventricular repolarization. ST elevation is a hallmark of acute myocardial injury (STEMI)."
+      },
+      {
+        "id": "m3-t4",
+        "title": "Key Intervals: PR, QT, and RR",
+        "summary": "Standard clinical timing measurements and rate calculations.",
+        "content": "- **PR Interval:** 120–200 ms (3–5 small squares). Prolongation indicates AV block.\n- **QT Interval:** Varies with heart rate; corrected (QTc) should be under 440 ms in men and 460 ms in women."
+      }
+    ]
+  },
+  {
+    "id": "module-4",
+    "title": "ECG Leads & Recording",
+    "description": "12-lead ECG system, limb and chest leads, electrode placement, calibration, and paper speed.",
+    "level": "Beginner",
+    "topicsCount": 4,
+    "source": "Wikipedia & Standard Clinical Practice Guidelines",
+    "topics": [
+      {
+        "id": "m4-t1",
+        "title": "The Standard 12-Lead System",
+        "summary": "Viewing the heart from 12 distinct electrical angles using 10 physical electrodes.",
+        "content": "A standard 12-lead ECG utilizes 6 limb electrodes (yielding leads I, II, III, aVR, aVL, aVF) and 6 precordial chest electrodes (V1 through V6) to construct a comprehensive 3D electrical representation of the heart."
+      },
+      {
+        "id": "m4-t2",
+        "title": "Limb Leads & Augmentation",
+        "summary": "Einthoven's triangle and Goldberger's augmented unipolar limb leads.",
+        "content": "Leads I, II, and III form Einthoven's triangle. Augmented leads (aVR, aVL, aVF) measure electrical potential relative to a central Wilson's terminal."
+      },
+      {
+        "id": "m4-t3",
+        "title": "Precordial Chest Leads (V1–V6)",
+        "summary": "Anatomic positioning across the intercostal spaces from right sternal border to mid-axillary line.",
+        "content": "Precordial leads view the heart in the horizontal plane:\n- **V1-V2:** Septal wall.\n- **V3-V4:** Anterior wall.\n- **V5-V6:** Lateral wall."
+      },
+      {
+        "id": "m4-t4",
+        "title": "Standard Calibration & Grid Standards",
+        "summary": "25 mm/s paper speed and 10 mm/mV voltage calibration standards.",
+        "content": "Standard ECG paper runs at 25 mm/s (where 1 small box = 0.04s) and is calibrated vertically at 10 mm/mV (where 1 small box = 0.1 mV)."
+      }
+    ]
+  },
+  {
+    "id": "module-5",
+    "title": "Systematic ECG Interpretation",
+    "description": "Step-by-step clinical evaluation of rate, rhythm, axis, intervals, and ischemic changes.",
+    "level": "Intermediate",
+    "topicsCount": 4,
+    "source": "ResearchGate: Clinical Cardiological Assessment Protocols",
+    "topics": [
+      {
+        "id": "m5-t1",
+        "title": "Rate and Rhythm Assessment",
+        "summary": "Calculating ventricular rate using the 300-150-100-75-60-50 rule and verifying sinus rhythm.",
+        "content": "To determine heart rate on a standard rhythm strip, count the number of large squares between R waves and divide 300 by that number, or count R waves on a 10-second strip and multiply by 6."
+      },
+      {
+        "id": "m5-t2",
+        "title": "Cardiac Axis Determination",
+        "summary": "Normal axis (-30° to +90°), left axis deviation, and right axis deviation using leads I and aVF.",
+        "content": "The mean electrical axis represents the overall direction of ventricular depolarization. Using the quadrant method with leads I and aVF identifies normal, left, or right axis deviation."
+      },
+      {
+        "id": "m5-t3",
+        "title": "Chamber Hypertrophy & Enlargement",
+        "summary": "Sokolov-Lyon criteria for left ventricular hypertrophy and P wave criteria for atrial enlargement.",
+        "content": "Criteria for LVH include S wave depth in V1 plus R wave height in V5/V6 exceeding 35 mm. Right ventricular hypertrophy manifests as dominant R waves in V1."
+      },
+      {
+        "id": "m5-t4",
+        "title": "Systematic 7-Step Reading Checklist",
+        "summary": "A reliable clinical workflow: Rate, Rhythm, Axis, P waves, PR interval, QRS width, ST-T abnormalities.",
+        "content": "Following a rigid checklist ensures no subtle ischemic changes or conduction blocks are missed during emergent evaluations."
+      }
+    ]
+  },
+  {
+    "id": "module-6",
+    "title": "ECG Abnormalities & Pathologies",
+    "description": "AFIB, ventricular tachycardia, brady/tachyarrhythmias, myocardial infarction, and bundle branch blocks.",
+    "level": "Advanced",
+    "topicsCount": 4,
+    "source": "Wikipedia & ResearchGate Electrocardiographic Pathology",
+    "topics": [
+      {
+        "id": "m6-t1",
+        "title": "Atrial Fibrillation (AFIB) & Flutter",
+        "summary": "Irregularly irregular rhythm, absence of distinct P waves, and fibrillatory/sawtooth waves.",
+        "content": "Atrial fibrillation is characterized by chaotic atrial electrical activity resulting in an irregularly irregular ventricular response and loss of organized atrial kick."
+      },
+      {
+        "id": "m6-t2",
+        "title": "Myocardial Infarction (STEMI vs NSTEMI)",
+        "summary": "ST-segment elevation, hyperacute T waves, pathological Q waves, and reciprocal depressions.",
+        "content": "Acute ST-elevation myocardial infarction (STEMI) presents with localized ST elevations in contiguous leads, reflecting full-thickness myocardial injury."
+      },
+      {
+        "id": "m6-t3",
+        "title": "Bundle Branch Blocks (RBBB & LBBB)",
+        "summary": "Wide QRS complexes (>= 120 ms) with 'RSR' pattern in V1 (RBBB) or broad notched R waves in lateral leads (LBBB).",
+        "content": "Conduction delays in the right or left bundle branches alter ventricular activation sequence, causing characteristic wide QRS morphologies."
+      },
+      {
+        "id": "m6-t4",
+        "title": "Life-Threatening Arrhythmias",
+        "summary": "Ventricular tachycardia, ventricular fibrillation, and severe bradyarrhythmias requiring urgent intervention.",
+        "content": "Malignant ventricular rhythms like V-tach and V-fib require immediate defibrillation and advanced cardiac life support (ACLS) protocols."
+      }
+    ]
+  },
+  {
+    "id": "module-7",
+    "title": "ECG Signal Processing & AI",
+    "description": "Noise filtering, wavelet transform feature extraction, automated machine learning classification, and wearable ECGs.",
+    "level": "Advanced",
+    "topicsCount": 4,
+    "source": "ResearchGate: AI and Biomedical Signal Processing in Cardiology",
+    "topics": [
+      {
+        "id": "m7-t1",
+        "title": "Digital Filtering & Denoising",
+        "summary": "Removing baseline wander, powerline interference (50/60 Hz), and EMG artifact noise.",
+        "content": "Raw ECG signals are susceptible to motion artifact and powerline interference. Digital finite impulse response (FIR) and infinite impulse response (IIR) filters clean signals prior to analysis."
+      },
+      {
+        "id": "m7-t2",
+        "title": "Feature Extraction & Waveform Delineation",
+        "summary": "Pan-Tompkins algorithm for R-peak detection and wavelet transforms for boundary segmentation.",
+        "content": "Accurate delineation of P, QRS, and T boundaries is crucial for automated interval measurement and diagnostic classification."
+      },
+      {
+        "id": "m7-t3",
+        "title": "Machine Learning & Deep Neural Networks",
+        "summary": "Convolutional Neural Networks (CNNs) and transformer models for multi-class ECG diagnosis.",
+        "content": "Modern AI models trained on datasets like PTB-XL achieve expert-level performance in classifying arrhythmias, hypertrophy, and myocardial infarction."
+      },
+      {
+        "id": "m7-t4",
+        "title": "Wearable ECGs & Ambulatory Monitoring",
+        "summary": "Smartwatches, single-lead patch monitors, and remote continuous telemetry research.",
+        "content": "Consumer wearables provide long-term ambulatory monitoring, enabling early detection of paroxysmal atrial fibrillation and silent arrhythmias in outpatient settings."
+      }
+    ]
+  }
+]

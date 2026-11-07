@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECG Learning Portal — Coming Soon</title>
+    <title>ECG E-Book — Learning Resources</title>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
@@ -14,10 +14,12 @@
             --text-main: #111827;
             --text-muted: #4b5563;
             --primary: #064e3b;
+            --primary-hover: #022c22;
             --border-color: #d1d5db;
+            --border-light: #e5e7eb;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; border-radius: 0 !important; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg-secondary); color: var(--text-main); line-height: 1.5; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg-secondary); color: var(--text-main); line-height: 1.6; }
         .app-layout { display: flex; width: 100%; height: 100vh; overflow: hidden; }
         .sidebar { width: 260px; background: var(--bg-sidebar); color: #ffffff; display: flex; flex-direction: column; border-right: 1px solid #062314; flex-shrink: 0; }
         .sidebar-brand { padding: 1.5rem 1.25rem; font-size: 1.1rem; font-weight: 700; border-bottom: 1px solid #123f28; display: flex; align-items: center; gap: 0.75rem; background: #082818; }
@@ -27,37 +29,102 @@
         .nav-item.active { background: var(--bg-sidebar-hover); color: #ffffff; border-left-color: #34d399; font-weight: 600; }
         .nav-left { display: flex; align-items: center; gap: 0.75rem; }
         .coming-soon-badge { font-size: 0.65rem; background: #123f28; color: #9ca3af; padding: 0.125rem 0.375rem; border: 1px solid #1e5638; text-transform: uppercase; }
-        .main-content { flex: 1; display: flex; flex-direction: column; background: var(--bg-secondary); overflow-y: auto; }
+
+        .main-content { flex: 1; display: flex; flex-direction: column; background: var(--bg-secondary); overflow: hidden; }
         .topbar { height: 60px; background: var(--bg-primary); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; flex-shrink: 0; }
         .topbar-title { font-size: 1rem; font-weight: 600; color: var(--primary); }
-        .content-body { padding: 3rem 2rem; max-width: 900px; width: 100%; margin: 0 auto; }
-        .placeholder-view { background: var(--bg-primary); border: 1px solid var(--border-color); padding: 4rem 2rem; text-align: center; }
-        .placeholder-view h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 0.75rem; }
-        .placeholder-view p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .ebook-layout { display: flex; flex: 1; overflow: hidden; }
+        .ebook-toc { width: 320px; background: var(--bg-primary); border-right: 1px solid var(--border-color); overflow-y: auto; padding: 1.5rem; flex-shrink: 0; }
+        .ebook-toc h3 { font-size: 0.95rem; font-weight: 700; text-transform: uppercase; color: var(--primary); margin-bottom: 1rem; letter-spacing: 0.05em; }
+        .toc-module-list { list-style: none; }
+        .toc-module-item { margin-bottom: 1rem; }
+        .toc-module-title { font-size: 0.9rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem; }
+        .toc-topics { list-style: none; padding-left: 1rem; }
+        .toc-topics li { margin-bottom: 0.25rem; }
+        .toc-topics a { font-size: 0.825rem; color: var(--text-muted); text-decoration: none; display: block; padding: 0.125rem 0; }
+        .toc-topics a:hover { color: var(--primary); text-decoration: underline; }
+
+        .ebook-reader { flex: 1; overflow-y: auto; padding: 2.5rem 3rem; max-width: 900px; }
+        .ebook-chapter { background: var(--bg-primary); border: 1px solid var(--border-color); padding: 2.5rem; margin-bottom: 2rem; }
+        .ebook-chapter-meta { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--primary); margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+        .ebook-chapter h2 { font-size: 1.5rem; color: var(--primary); margin-bottom: 0.75rem; }
+        .ebook-chapter-desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-light); }
+
+        .ebook-topic { margin-top: 1.5rem; }
+        .ebook-topic h3 { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; }
+        .ebook-topic-summary { font-size: 0.9rem; font-weight: 600; color: var(--primary); margin-bottom: 0.75rem; }
+        .ebook-topic-content { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+        .ebook-topic-content ul { margin-left: 1.25rem; margin-top: 0.5rem; }
+        .ebook-topic-content li { margin-bottom: 0.25rem; }
+        .chapter-source { font-size: 0.75rem; color: var(--text-muted); margin-top: 1.5rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light); }
+
+        @media (max-width: 900px) { .ebook-layout { flex-direction: column; overflow: auto; } .ebook-toc { width: 100%; height: auto; max-height: 250px; } .app-layout { flex-direction: column; overflow: auto; } .sidebar { width: 100%; height: auto; } }
     </style>
 </head>
 <body>
     <div class="app-layout">
+        <!-- Permanent Dark Green Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-brand">
                 <i data-lucide="activity" style="width: 20px; height: 20px; color: #34d399;"></i>
                 <span>ECG Platform</span>
             </div>
-            <nav class="sidebar-nav" id="sidebar-nav-container">
-                <!-- Injected via script based on filename -->
+            <nav class="sidebar-nav">
+                <a class="nav-item" href="/">
+                    <div class="nav-left"><i data-lucide="home" style="width: 18px; height: 18px;"></i><span>Home</span></div>
+                </a>
+                <a class="nav-item" href="/analyzer.html">
+                    <div class="nav-left"><i data-lucide="cpu" style="width: 18px; height: 18px;"></i><span>ECG Analyzer</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+                <a class="nav-item" href="/quiz.html">
+                    <div class="nav-left"><i data-lucide="help-circle" style="width: 18px; height: 18px;"></i><span>ECG Quiz</span></div>
+                </a>
+                <a class="nav-item" href="/flashcards.html">
+                    <div class="nav-left"><i data-lucide="layers" style="width: 18px; height: 18px;"></i><span>Flashcards</span></div>
+                </a>
+                <a class="nav-item" href="/upload.html">
+                    <div class="nav-left"><i data-lucide="upload-cloud" style="width: 18px; height: 18px;"></i><span>ECG Image Upload</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+                <a class="nav-item active" href="/resources.html">
+                    <div class="nav-left"><i data-lucide="book-open" style="width: 18px; height: 18px;"></i><span>Learning Resources</span></div>
+                </a>
+                <a class="nav-item" href="/performance.html">
+                    <div class="nav-left"><i data-lucide="bar-chart-2" style="width: 18px; height: 18px;"></i><span>Progress & Performance</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+                <a class="nav-item" href="/profile.html">
+                    <div class="nav-left"><i data-lucide="user" style="width: 18px; height: 18px;"></i><span>Profile</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
+                <a class="nav-item" href="/settings.html">
+                    <div class="nav-left"><i data-lucide="settings" style="width: 18px; height: 18px;"></i><span>Settings</span></div>
+                    <span class="coming-soon-badge">Soon</span>
+                </a>
             </nav>
         </aside>
 
+        <!-- Main Content Area -->
         <main class="main-content">
             <header class="topbar">
-                <div class="topbar-title" id="page-title">Module</div>
-                <div style="font-size: 0.875rem; color: var(--text-muted);">Medical Education Portal</div>
+                <div class="topbar-title">ECG Educational E-Book & Library</div>
+                <div style="font-size: 0.875rem; color: var(--text-muted);">Institutional Reference Manual</div>
             </header>
 
-            <div class="content-body">
-                <div class="placeholder-view">
-                    <h3 id="module-heading">Feature Coming Soon</h3>
-                    <p id="module-desc">This module is currently under development as part of the institutional roadmap.</p>
+            <div class="ebook-layout">
+                <!-- Table of Contents Sidebar -->
+                <nav class="ebook-toc">
+                    <h3>Table of Contents</h3>
+                    <ul class="toc-module-list" id="toc-list">
+                        <!-- Injected via JS -->
+                    </ul>
+                </nav>
+
+                <!-- Continuous E-Book Reader -->
+                <div class="ebook-reader" id="ebook-container">
+                    <div style="text-align: center; padding: 3rem; color: var(--text-muted);">Loading ECG E-Book manual...</div>
                 </div>
             </div>
         </main>
@@ -66,43 +133,69 @@
     <script>
         lucide.createIcons();
 
-        const path = window.location.pathname.split('/').pop() || 'analyzer.html';
-        const titles = {
-            'analyzer.html': ['AI ECG Analyzer', 'Automated rhythm detection, heart rate extraction, and classification confidence scoring.'],
-            'upload.html': ['ECG Image Upload', 'Secure drag-and-drop interface supporting PNG, JPG, and PDF 12-lead strip formats.'],
-            'resources.html': ['Learning Resources', 'Curated clinical reference library on electrophysiology, intervals, and axis deviations.'],
-            'history.html': ['ECG History', 'Archive of past analyzed cases, quiz attempts, and diagnostic notes.'],
-            'performance.html': ['Progress & Performance', 'Granular proficiency metrics per cardiac category and historical improvement curves.'],
-            'profile.html': ['User Profile', 'Institutional credentials and account settings.'],
-            'settings.html': ['Platform Settings', 'System preferences and configuration options.']
-        };
+        async function loadEBook() {
+            try {
+                const res = await fetch('learning_resources.json');
+                const modules = await res.json();
 
-        const info = titles[path] || ['Coming Soon', 'This feature is under development.'];
-        document.getElementById('page-title').innerText = info[0];
-        document.getElementById('module-heading').innerText = info[0];
-        document.getElementById('module-desc').innerText = info[1];
+                const tocList = document.getElementById('toc-list');
+                const ebookContainer = document.getElementById('ebook-container');
 
-        // Render sidebar with correct active item
-        const navItems = [
-            { href: '/', icon: 'home', label: 'Home', soon: false },
-            { href: '/analyzer.html', icon: 'cpu', label: 'ECG Analyzer', soon: true },
-            { href: '/quiz.html', icon: 'help-circle', label: 'ECG Quiz', soon: false },
-            { href: '/upload.html', icon: 'upload-cloud', label: 'ECG Image Upload', soon: true },
-            { href: '/resources.html', icon: 'book-open', label: 'Learning Resources', soon: true },
-            { href: '/history.html', icon: 'clock', label: 'ECG History', soon: true },
-            { href: '/performance.html', icon: 'bar-chart-2', label: 'Progress & Performance', soon: true },
-            { href: '/profile.html', icon: 'user', label: 'Profile', soon: true },
-            { href: '/settings.html', icon: 'settings', label: 'Settings', soon: true }
-        ];
+                tocList.innerHTML = '';
+                ebookContainer.innerHTML = '';
 
-        const navContainer = document.getElementById('sidebar-nav-container');
-        navContainer.innerHTML = navItems.map(item => `
-            <a class="nav-item ${window.location.pathname.endsWith(item.href) ? 'active' : ''}" href="${item.href}">
-                <div class="nav-left"><i data-lucide="${item.icon}" style="width: 18px; height: 18px;"></i><span>${item.label}</span></div>
-                ${item.soon ? '<span class="coming-soon-badge">Soon</span>' : ''}
-            </a>
-        `).join('');
-        lucide.createIcons();
+                modules.forEach(m => {
+                    // Build TOC item
+                    const tocLi = document.createElement('li');
+                    tocLi.className = 'toc-module-item';
+                    tocLi.innerHTML = `
+                        <div class="toc-module-title"><a href="#${m.id}" style="color: inherit; text-decoration: none;">Module ${m.id.replace('module-', '')}: ${m.title}</a></div>
+                        <ul class="toc-topics">
+                            ${m.topics.map(t => `<li><a href="#${t.id}">${t.title}</a></li>`).join('')}
+                        </ul>
+                    `;
+                    tocList.appendChild(tocLi);
+
+                    // Build E-Book Chapter
+                    const chapterDiv = document.createElement('div');
+                    chapterDiv.className = 'ebook-chapter';
+                    chapterDiv.id = m.id;
+
+                    let topicsHtml = '';
+                    m.topics.forEach((t, idx) => {
+                        let formattedContent = t.content
+                            .replace(/### (.*?)\n/g, '<h4 style="font-size: 1rem; font-weight: 700; color: var(--primary); margin-top: 1rem; margin-bottom: 0.5rem;">$1</h4>')
+                            .replace(/- \*\*(.*?)\*\*: (.*?)\n/g, '<li><strong>$1:</strong> $2</li>')
+                            .replace(/- (.*?)\n/g, '<li>$1</li>')
+                            .replace(/\n\n/g, '</p><p style="margin-top: 0.75rem;">');
+
+                        topicsHtml += `
+                            <div class="ebook-topic" id="${t.id}">
+                                <h3>${idx + 1}. ${t.title}</h3>
+                                <div class="ebook-topic-summary">${t.summary}</div>
+                                <div class="ebook-topic-content"><p>${formattedContent}</p></div>
+                            </div>
+                        `;
+                    });
+
+                    chapterDiv.innerHTML = `
+                        <div class="ebook-chapter-meta">Module ${m.id.replace('module-', '')} • ${m.level} Level</div>
+                        <h2>${m.title}</h2>
+                        <div class="ebook-chapter-desc">${m.description}</div>
+                        ${topicsHtml}
+                        <div class="chapter-source"><strong>Source Attribution:</strong> ${m.source}</div>
+                    `;
+                    ebookContainer.appendChild(chapterDiv);
+                });
+
+                lucide.createIcons();
+            } catch (err) {
+                console.error("Failed to load e-book modules:", err);
+                document.getElementById('ebook-container').innerHTML = `<div style="padding: 2rem; text-align: center; color: var(--text-muted);">Failed to load e-book content.</div>`;
+            }
+        }
+
+        loadEBook();
     </script>
 </body>
 </html>
