@@ -1,0 +1,286 @@
+import json
+import pandas as pd
+import random
+
+answer_key_df = pd.read_csv('answer_key.csv')
+print("Columns:", answer_key_df.columns.tolist())
+
+with open('ai_answers.json', 'r') as f:
+    ai_answers = json.load(f)
+
+classes_list = [
+    'Normal',
+    'Atrial fibrillation',
+    'Left bundle branch block',
+    'Right bundle branch block',
+    'Inferior myocardial infarction',
+    'First-degree AV block'
+]
+
+sampled_df = answer_key_df.groupby('true_class', group_keys=False).apply(lambda x: x.sample(min(len(x), 2))).head(10).reset_index(drop=True)
+
+quiz_items = []
+for idx, row in sampled_df.iterrows():
+    ecg_id = str(row['ecg_id'])
+    # Access by explicit column or positional if needed
+    true_class = row.iloc[2] # true_class is column index 2
+    img_filename = row.iloc[1] # image_filename is column index 1
+    ai_ans = ai_answers.get(ecg_id, {})
+
+    distractors = [c for c in classes_list if c != true_class]
+    random.shuffle(distractors)
+    options = [true_class] + distractors[:3]
+    random.shuffle(options)
+
+    quiz_items.append({
+        "id": idx + 1,
+        "ecg_id": ecg_id,
+        "image": f"images/{img_filename}",
+        "options": options,
+        "answer": true_class,
+        "ai_answer": ai_ans.get('best_match', true_class),
+        "ai_reason": ai_ans.get('reason', 'Analysis of P-QRS-T morphology.')
+    })
+
+with open('quiz_data.json', 'w') as f:
+    json.dump(quiz_items, f, indent=2)
+
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECG Learning Portal — Student Quiz & AI Second Opinion</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin: 1rem;
+        }
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+        .subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        .disclaimer {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 0.75rem;
+            font-size: 0.85rem;
+            color: #991b1b;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+        .ecg-img-container {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+        }
+        .ecg-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        button.option-btn {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+            color: #334155;
+        }
+        button.option-btn:hover {
+            background: #e2e8f0;
+            border-color: #94a3b8;
+        }
+        button.option-btn.correct {
+            background: #dcfce7 !important;
+            border-color: #22c55e !important;
+            color: #166534 !important;
+        }
+        button.option-btn.incorrect {
+            background: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #991b1b !important;
+        }
+        .feedback-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            display: none;
+        }
+        .next-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            float: right;
+        }
+        .next-btn:hover {
+            background: #1d4ed8;
+        }
+        .score-card {
+            text-align: center;
+            display: none;
+        }
+        .progress {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ECG Learning Portal</h1>
+        <div class="subtitle">Test your ECG interpretation skills against clinical ground truth and an AI second opinion.</div>
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> For educational purposes only. Not for diagnosing or treating patients.
+        </div>
+
+        <div id="quiz-screen">
+            <div class="progress" id="progress-indicator">Question 1 of 10</div>
+            <div class="ecg-img-container">
+                <img id="ecg-image" src="" alt="12-Lead ECG">
+            </div>
+            <div class="options-grid" id="options-container">
+                <!-- Options injected via JS -->
+            </div>
+            <div class="feedback-box" id="feedback-box">
+                <div id="feedback-text" style="font-weight: 600; margin-bottom: 0.5rem;"></div>
+                <div id="ai-opinion-text" style="font-size: 0.9rem; color: #475569;"></div>
+                <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next Question</button>
+            </div>
+        </div>
+
+        <div class="score-card" id="score-screen">
+            <h2>Quiz Complete!</h2>
+            <p id="final-score-text" style="font-size: 1.25rem; margin: 1.5rem 0; font-weight: 600;"></p>
+            <p style="color: #64748b; font-size: 0.9rem;">Take a screenshot of your score and share it with your study group!</p>
+            <button class="next-btn" onclick="location.reload()" style="float: none;">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        let quizData = [];
+        let currentIndex = 0;
+        let score = 0;
+        let answered = false;
+
+        async function loadQuiz() {
+            const res = await fetch('quiz_data.json');
+            quizData = await res.json();
+            showQuestion();
+        }
+
+        function showQuestion() {
+            answered = false;
+            const q = quizData[currentIndex];
+            document.getElementById('progress-indicator').innerText = `Question ${currentIndex + 1} of ${quizData.length}`;
+            document.getElementById('ecg-image').src = q.image;
+
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerText = opt;
+                btn.onclick = () => selectAnswer(opt, btn);
+                optionsContainer.appendChild(btn);
+            });
+
+            document.getElementById('feedback-box').style.display = 'none';
+        }
+
+        function selectAnswer(selectedOpt, btnEl) {
+            if (answered) return;
+            answered = true;
+            const q = quizData[currentIndex];
+            const isCorrect = (selectedOpt === q.answer);
+            if (isCorrect) score++;
+
+            const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach(b => {
+                if (b.innerText === q.answer) {
+                    b.classList.add('correct');
+                } else if (b === btnEl && !isCorrect) {
+                    b.classList.add('incorrect');
+                }
+                b.style.cursor = 'default';
+            });
+
+            const feedbackBox = document.getElementById('feedback-box');
+            const feedbackText = document.getElementById('feedback-text');
+            const aiText = document.getElementById('ai-opinion-text');
+
+            feedbackText.innerHTML = isCorrect ?
+                `<span style="color: #16a34a;">✓ Correct!</span> True label: <strong>${q.answer}</strong>` :
+                `<span style="color: #dc2626;">✗ Incorrect.</span> True label: <strong>${q.answer}</strong>`;
+
+            aiText.innerHTML = `🤖 <strong>AI Second Opinion:</strong> Guessed <strong>${q.ai_answer}</strong>.<br><em>Reason:</em> ${q.ai_reason}`;
+            feedbackBox.style.display = 'block';
+        }
+
+        function nextQuestion() {
+            currentIndex++;
+            if (currentIndex < quizData.length) {
+                showQuestion();
+            } else {
+                document.getElementById('quiz-screen').style.display = 'none';
+                const scoreScreen = document.getElementById('score-screen');
+                scoreScreen.style.display = 'block';
+                document.getElementById('final-score-text').innerText = `You scored ${score} out of ${quizData.length} (${Math.round((score/quizData.length)*100)}%)`;
+            }
+        }
+
+        loadQuiz();
+    </script>
+</body>
+</html>
+"""
+
+with open('index.html', 'w') as f:
+    f.write(html_content)
+
+print("Generated index.html and quiz_data.json successfully.")

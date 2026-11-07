@@ -1,0 +1,49 @@
+ecg_id,patient_id,class,code,filename_lr,filename_hr
+1,15709.0,Normal,NORM,records100/00000/00001_lr,records500/00000/00001_hr
+3,20372.0,Normal,NORM,records100/00000/00003_lr,records500/00000/00003_hr
+4,17014.0,Normal,NORM,records100/00000/00004_lr,records500/00000/00004_hr
+5,17448.0,Normal,NORM,records100/00000/00005_lr,records500/00000/00005_hr
+6,19005.0,Normal,NORM,records100/00000/00006_lr,records500/00000/00006_hr
+7,16193.0,Normal,NORM,records100/00000/00007_lr,records500/00000/00007_hr
+9,18792.0,Normal,NORM,records100/00000/00009_lr,records500/00000/00009_hr
+10,9456.0,Normal,NORM,records100/00000/00010_lr,records500/00000/00010_hr
+351,5304.0,Atrial fibrillation,AFIB,records100/00000/00351_lr,records500/00000/00351_hr
+4117,19574.0,Atrial fibrillation,AFIB,records100/04000/04117_lr,records500/04000/04117_hr
+4761,9303.0,Atrial fibrillation,AFIB,records100/04000/04761_lr,records500/04000/04761_hr
+7221,12081.0,Atrial fibrillation,AFIB,records100/07000/07221_lr,records500/07000/07221_hr
+7489,16814.0,Atrial fibrillation,AFIB,records100/07000/07489_lr,records500/07000/07489_hr
+8215,14026.0,Atrial fibrillation,AFIB,records100/08000/08215_lr,records500/08000/08215_hr
+12542,20143.0,Atrial fibrillation,AFIB,records100/12000/12542_lr,records500/12000/12542_hr
+12632,414.0,Atrial fibrillation,AFIB,records100/12000/12632_lr,records500/12000/12632_hr
+180,15592.0,Left bundle branch block,CLBBB,records100/00000/00180_lr,records500/00000/00180_hr
+256,565.0,Left bundle branch block,CLBBB,records100/00000/00256_lr,records500/00000/00256_hr
+279,437.0,Left bundle branch block,CLBBB,records100/00000/00279_lr,records500/00000/00279_hr
+286,6410.0,Left bundle branch block,CLBBB,records100/00000/00286_lr,records500/00000/00286_hr
+287,6437.0,Left bundle branch block,CLBBB,records100/00000/00287_lr,records500/00000/00287_hr
+338,7479.0,Left bundle branch block,CLBBB,records100/00000/00338_lr,records500/00000/00338_hr
+489,7705.0,Left bundle branch block,CLBBB,records100/00000/00489_lr,records500/00000/00489_hr
+517,12006.0,Left bundle branch block,CLBBB,records100/00000/00517_lr,records500/00000/00517_hr
+172,20766.0,Right bundle branch block,CRBBB,records100/00000/00172_lr,records500/00000/00172_hr
+195,14472.0,Right bundle branch block,CRBBB,records100/00000/00195_lr,records500/00000/00195_hr
+269,2282.0,Right bundle branch block,CRBBB,records100/00000/00269_lr,records500/00000/00269_hr
+310,1316.0,Right bundle branch block,CRBBB,records100/00000/00310_lr,records500/00000/00310_hr
+424,5026.0,Right bundle branch block,CRBBB,records100/00000/00424_lr,records500/00000/00424_hr
+428,4902.0,Right bundle branch block,CRBBB,records100/00000/00428_lr,records500/00000/00428_hr
+455,13346.0,Right bundle branch block,CRBBB,records100/00000/00455_lr,records500/00000/00455_hr
+477,14794.0,Right bundle branch block,CRBBB,records100/00000/00477_lr,records500/00000/00477_hr
+257,6078.0,Inferior myocardial infarction,IMI,records100/00000/00257_lr,records500/00000/00257_hr
+270,1480.0,Inferior myocardial infarction,IMI,records100/00000/00270_lr,records500/00000/00270_hr
+281,641.0,Inferior myocardial infarction,IMI,records100/00000/00281_lr,records500/00000/00281_hr
+290,2261.0,Inferior myocardial infarction,IMI,records100/00000/00290_lr,records500/00000/00290_hr
+453,9795.0,Inferior myocardial infarction,IMI,records100/00000/00453_lr,records500/00000/00453_hr
+496,4160.0,Inferior myocardial infarction,IMI,records100/00000/00496_lr,records500/00000/00496_hr
+513,21231.0,Inferior myocardial infarction,IMI,records100/00000/00513_lr,records500/00000/00513_hr
+532,15942.0,Inferior myocardial infarction,IMI,records100/00000/00532_lr,records500/00000/00532_hr
+102,9887.0,First-degree AV block,1AVB,records100/00000/00102_lr,records500/00000/00102_hr
+182,12000.0,First-degree AV block,1AVB,records100/00000/00182_lr,records500/00000/00182_hr
+191,10630.0,First-degree AV block,1AVB,records100/00000/00191_lr,records500/00000/00191_hr
+209,14751.0,First-degree AV block,1AVB,records100/00000/00209_lr,records500/00000/00209_hr
+218,13925.0,First-degree AV block,1AVB,records100/00000/00218_lr,records500/00000/00218_hr
+234,17115.0,First-degree AV block,1AVB,records100/00000/00234_lr,records500/00000/00234_hr
+347,449.0,First-degree AV block,1AVB,records100/00000/00347_lr,records500/00000/00347_hr
+413,1631.0,First-degree AV block,1AVB,records100/00000/00413_lr,records500/00000/00413_hr

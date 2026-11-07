@@ -1,0 +1,49 @@
+ecg_id,image_filename,true_class,code,patient_id
+1,ecg_1_42942.png,Normal,NORM,15709.0
+3,ecg_3_14041.png,Normal,NORM,20372.0
+4,ecg_4_71806.png,Normal,NORM,17014.0
+5,ecg_5_53387.png,Normal,NORM,17448.0
+6,ecg_6_28534.png,Normal,NORM,19005.0
+7,ecg_7_70820.png,Normal,NORM,16193.0
+9,ecg_9_85351.png,Normal,NORM,18792.0
+10,ecg_10_43828.png,Normal,NORM,9456.0
+351,ecg_351_15395.png,Atrial fibrillation,AFIB,5304.0
+4117,ecg_4117_57800.png,Atrial fibrillation,AFIB,19574.0
+4761,ecg_4761_40485.png,Atrial fibrillation,AFIB,9303.0
+7221,ecg_7221_79485.png,Atrial fibrillation,AFIB,12081.0
+7489,ecg_7489_53751.png,Atrial fibrillation,AFIB,16814.0
+8215,ecg_8215_47866.png,Atrial fibrillation,AFIB,14026.0
+12542,ecg_12542_21322.png,Atrial fibrillation,AFIB,20143.0
+12632,ecg_12632_14686.png,Atrial fibrillation,AFIB,414.0
+180,ecg_180_54553.png,Left bundle branch block,CLBBB,15592.0
+256,ecg_256_25493.png,Left bundle branch block,CLBBB,565.0
+279,ecg_279_64237.png,Left bundle branch block,CLBBB,437.0
+286,ecg_286_78963.png,Left bundle branch block,CLBBB,6410.0
+287,ecg_287_54001.png,Left bundle branch block,CLBBB,6437.0
+338,ecg_338_84725.png,Left bundle branch block,CLBBB,7479.0
+489,ecg_489_98990.png,Left bundle branch block,CLBBB,7705.0
+517,ecg_517_94306.png,Left bundle branch block,CLBBB,12006.0
+172,ecg_172_63185.png,Right bundle branch block,CRBBB,20766.0
+195,ecg_195_70175.png,Right bundle branch block,CRBBB,14472.0
+269,ecg_269_53102.png,Right bundle branch block,CRBBB,2282.0
+310,ecg_310_97936.png,Right bundle branch block,CRBBB,1316.0
+424,ecg_424_15151.png,Right bundle branch block,CRBBB,5026.0
+428,ecg_428_29512.png,Right bundle branch block,CRBBB,4902.0
+455,ecg_455_35484.png,Right bundle branch block,CRBBB,13346.0
+477,ecg_477_47746.png,Right bundle branch block,CRBBB,14794.0
+257,ecg_257_17115.png,Inferior myocardial infarction,IMI,6078.0
+270,ecg_270_68696.png,Inferior myocardial infarction,IMI,1480.0
+281,ecg_281_17128.png,Inferior myocardial infarction,IMI,641.0
+290,ecg_290_35384.png,Inferior myocardial infarction,IMI,2261.0
+453,ecg_453_34792.png,Inferior myocardial infarction,IMI,9795.0
+496,ecg_496_68338.png,Inferior myocardial infarction,IMI,4160.0
+513,ecg_513_59864.png,Inferior myocardial infarction,IMI,21231.0
+532,ecg_532_95387.png,Inferior myocardial infarction,IMI,15942.0
+102,ecg_102_48908.png,First-degree AV block,1AVB,9887.0
+182,ecg_182_23961.png,First-degree AV block,1AVB,12000.0
+191,ecg_191_79543.png,First-degree AV block,1AVB,10630.0
+209,ecg_209_87974.png,First-degree AV block,1AVB,14751.0
+218,ecg_218_45392.png,First-degree AV block,1AVB,13925.0
+234,ecg_234_82447.png,First-degree AV block,1AVB,17115.0
+347,ecg_347_87079.png,First-degree AV block,1AVB,449.0
+413,ecg_413_84653.png,First-degree AV block,1AVB,1631.0

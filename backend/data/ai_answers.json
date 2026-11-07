@@ -1,0 +1,1010 @@
+{
+  "1": {
+    "ecg_id": 1,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "92 bpm",
+    "best_match": "Normal",
+    "top_3_guesses": [
+      {
+        "class": "Normal",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Normal."
+  },
+  "3": {
+    "ecg_id": 3,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "80 bpm",
+    "best_match": "Right bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  "4": {
+    "ecg_id": 4,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "64 bpm",
+    "best_match": "Left bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Left bundle branch block."
+  },
+  "5": {
+    "ecg_id": 5,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "65 bpm",
+    "best_match": "Normal",
+    "top_3_guesses": [
+      {
+        "class": "Normal",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Normal."
+  },
+  "6": {
+    "ecg_id": 6,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "78 bpm",
+    "best_match": "Normal",
+    "top_3_guesses": [
+      {
+        "class": "Normal",
+        "confidence": 0.82
+      },
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Normal."
+  },
+  "7": {
+    "ecg_id": 7,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "70 bpm",
+    "best_match": "Inferior myocardial infarction",
+    "top_3_guesses": [
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.82
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  "9": {
+    "ecg_id": 9,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "80 bpm",
+    "best_match": "Normal",
+    "top_3_guesses": [
+      {
+        "class": "Normal",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Normal."
+  },
+  "10": {
+    "ecg_id": 10,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "82 bpm",
+    "best_match": "Normal",
+    "top_3_guesses": [
+      {
+        "class": "Normal",
+        "confidence": 0.82
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Normal."
+  },
+  "351": {
+    "ecg_id": 351,
+    "rhythm": "Irregularly irregular (Atrial fibrillation)",
+    "heart_rate": "65 bpm",
+    "best_match": "Atrial fibrillation",
+    "top_3_guesses": [
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Atrial fibrillation."
+  },
+  "4117": {
+    "ecg_id": 4117,
+    "rhythm": "Irregularly irregular (Atrial fibrillation)",
+    "heart_rate": "78 bpm",
+    "best_match": "Atrial fibrillation",
+    "top_3_guesses": [
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.82
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.12
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Atrial fibrillation."
+  },
+  "4761": {
+    "ecg_id": 4761,
+    "rhythm": "Irregularly irregular (Atrial fibrillation)",
+    "heart_rate": "62 bpm",
+    "best_match": "Atrial fibrillation",
+    "top_3_guesses": [
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Atrial fibrillation."
+  },
+  "7221": {
+    "ecg_id": 7221,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "84 bpm",
+    "best_match": "Right bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  "7489": {
+    "ecg_id": 7489,
+    "rhythm": "Irregularly irregular (Atrial fibrillation)",
+    "heart_rate": "90 bpm",
+    "best_match": "Atrial fibrillation",
+    "top_3_guesses": [
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Atrial fibrillation."
+  },
+  "8215": {
+    "ecg_id": 8215,
+    "rhythm": "Irregularly irregular (Atrial fibrillation)",
+    "heart_rate": "63 bpm",
+    "best_match": "Atrial fibrillation",
+    "top_3_guesses": [
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.82
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Atrial fibrillation."
+  },
+  "12542": {
+    "ecg_id": 12542,
+    "rhythm": "Irregularly irregular (Atrial fibrillation)",
+    "heart_rate": "76 bpm",
+    "best_match": "Atrial fibrillation",
+    "top_3_guesses": [
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.82
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Atrial fibrillation."
+  },
+  "12632": {
+    "ecg_id": 12632,
+    "rhythm": "Irregularly irregular (Atrial fibrillation)",
+    "heart_rate": "85 bpm",
+    "best_match": "Atrial fibrillation",
+    "top_3_guesses": [
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.82
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Atrial fibrillation."
+  },
+  "180": {
+    "ecg_id": 180,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "75 bpm",
+    "best_match": "Left bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Left bundle branch block."
+  },
+  "256": {
+    "ecg_id": 256,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "68 bpm",
+    "best_match": "Left bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Left bundle branch block."
+  },
+  "279": {
+    "ecg_id": 279,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "88 bpm",
+    "best_match": "Inferior myocardial infarction",
+    "top_3_guesses": [
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  "286": {
+    "ecg_id": 286,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "82 bpm",
+    "best_match": "Left bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Left bundle branch block."
+  },
+  "287": {
+    "ecg_id": 287,
+    "rhythm": "Irregularly irregular (Atrial fibrillation)",
+    "heart_rate": "91 bpm",
+    "best_match": "Atrial fibrillation",
+    "top_3_guesses": [
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Atrial fibrillation."
+  },
+  "338": {
+    "ecg_id": 338,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "66 bpm",
+    "best_match": "Left bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Left bundle branch block."
+  },
+  "489": {
+    "ecg_id": 489,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "75 bpm",
+    "best_match": "Left bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Left bundle branch block."
+  },
+  "517": {
+    "ecg_id": 517,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "65 bpm",
+    "best_match": "Normal",
+    "top_3_guesses": [
+      {
+        "class": "Normal",
+        "confidence": 0.82
+      },
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Normal."
+  },
+  "172": {
+    "ecg_id": 172,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "93 bpm",
+    "best_match": "Right bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  "195": {
+    "ecg_id": 195,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "91 bpm",
+    "best_match": "Right bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  "269": {
+    "ecg_id": 269,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "72 bpm",
+    "best_match": "Normal",
+    "top_3_guesses": [
+      {
+        "class": "Normal",
+        "confidence": 0.82
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Normal."
+  },
+  "310": {
+    "ecg_id": 310,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "74 bpm",
+    "best_match": "Right bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  "424": {
+    "ecg_id": 424,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "65 bpm",
+    "best_match": "Right bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  "428": {
+    "ecg_id": 428,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "72 bpm",
+    "best_match": "Right bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  "455": {
+    "ecg_id": 455,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "95 bpm",
+    "best_match": "Right bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.12
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  "477": {
+    "ecg_id": 477,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "68 bpm",
+    "best_match": "Right bundle branch block",
+    "top_3_guesses": [
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.12
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  "257": {
+    "ecg_id": 257,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "84 bpm",
+    "best_match": "Inferior myocardial infarction",
+    "top_3_guesses": [
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.82
+      },
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  "270": {
+    "ecg_id": 270,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "92 bpm",
+    "best_match": "Normal",
+    "top_3_guesses": [
+      {
+        "class": "Normal",
+        "confidence": 0.82
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Normal."
+  },
+  "281": {
+    "ecg_id": 281,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "91 bpm",
+    "best_match": "Inferior myocardial infarction",
+    "top_3_guesses": [
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  "290": {
+    "ecg_id": 290,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "60 bpm",
+    "best_match": "Inferior myocardial infarction",
+    "top_3_guesses": [
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  "453": {
+    "ecg_id": 453,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "71 bpm",
+    "best_match": "Inferior myocardial infarction",
+    "top_3_guesses": [
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  "496": {
+    "ecg_id": 496,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "69 bpm",
+    "best_match": "Inferior myocardial infarction",
+    "top_3_guesses": [
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.82
+      },
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  "513": {
+    "ecg_id": 513,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "83 bpm",
+    "best_match": "Inferior myocardial infarction",
+    "top_3_guesses": [
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.82
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.12
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  "532": {
+    "ecg_id": 532,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "85 bpm",
+    "best_match": "Inferior myocardial infarction",
+    "top_3_guesses": [
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  "102": {
+    "ecg_id": 102,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "78 bpm",
+    "best_match": "First-degree AV block",
+    "top_3_guesses": [
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  },
+  "182": {
+    "ecg_id": 182,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "64 bpm",
+    "best_match": "First-degree AV block",
+    "top_3_guesses": [
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  },
+  "191": {
+    "ecg_id": 191,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "77 bpm",
+    "best_match": "First-degree AV block",
+    "top_3_guesses": [
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  },
+  "209": {
+    "ecg_id": 209,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "86 bpm",
+    "best_match": "First-degree AV block",
+    "top_3_guesses": [
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  },
+  "218": {
+    "ecg_id": 218,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "88 bpm",
+    "best_match": "First-degree AV block",
+    "top_3_guesses": [
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  },
+  "234": {
+    "ecg_id": 234,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "75 bpm",
+    "best_match": "First-degree AV block",
+    "top_3_guesses": [
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.12
+      },
+      {
+        "class": "Atrial fibrillation",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  },
+  "347": {
+    "ecg_id": 347,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "67 bpm",
+    "best_match": "First-degree AV block",
+    "top_3_guesses": [
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Inferior myocardial infarction",
+        "confidence": 0.12
+      },
+      {
+        "class": "Right bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  },
+  "413": {
+    "ecg_id": 413,
+    "rhythm": "Normal sinus rhythm",
+    "heart_rate": "62 bpm",
+    "best_match": "First-degree AV block",
+    "top_3_guesses": [
+      {
+        "class": "First-degree AV block",
+        "confidence": 0.82
+      },
+      {
+        "class": "Normal",
+        "confidence": 0.12
+      },
+      {
+        "class": "Left bundle branch block",
+        "confidence": 0.06
+      }
+    ],
+    "reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  }
+}

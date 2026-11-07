@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "ecg_id": "8215",
+    "image": "images/ecg_8215_47866.png",
+    "options": [
+      "AFIB",
+      "Inferior myocardial infarction",
+      "Right bundle branch block",
+      "Left bundle branch block"
+    ],
+    "answer": "AFIB",
+    "ai_answer": "Atrial fibrillation",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with Atrial fibrillation."
+  },
+  {
+    "id": 2,
+    "ecg_id": "7221",
+    "image": "images/ecg_7221_79485.png",
+    "options": [
+      "Right bundle branch block",
+      "First-degree AV block",
+      "AFIB",
+      "Inferior myocardial infarction"
+    ],
+    "answer": "AFIB",
+    "ai_answer": "Right bundle branch block",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  {
+    "id": 3,
+    "ecg_id": "191",
+    "image": "images/ecg_191_79543.png",
+    "options": [
+      "1AVB",
+      "Normal",
+      "First-degree AV block",
+      "Right bundle branch block"
+    ],
+    "answer": "1AVB",
+    "ai_answer": "First-degree AV block",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  },
+  {
+    "id": 4,
+    "ecg_id": "234",
+    "image": "images/ecg_234_82447.png",
+    "options": [
+      "1AVB",
+      "Normal",
+      "First-degree AV block",
+      "Atrial fibrillation"
+    ],
+    "answer": "1AVB",
+    "ai_answer": "First-degree AV block",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with First-degree AV block."
+  },
+  {
+    "id": 5,
+    "ecg_id": "281",
+    "image": "images/ecg_281_17128.png",
+    "options": [
+      "Normal",
+      "IMI",
+      "Inferior myocardial infarction",
+      "Atrial fibrillation"
+    ],
+    "answer": "IMI",
+    "ai_answer": "Inferior myocardial infarction",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  {
+    "id": 6,
+    "ecg_id": "257",
+    "image": "images/ecg_257_17115.png",
+    "options": [
+      "Inferior myocardial infarction",
+      "Atrial fibrillation",
+      "Right bundle branch block",
+      "IMI"
+    ],
+    "answer": "IMI",
+    "ai_answer": "Inferior myocardial infarction",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with Inferior myocardial infarction."
+  },
+  {
+    "id": 7,
+    "ecg_id": "489",
+    "image": "images/ecg_489_98990.png",
+    "options": [
+      "First-degree AV block",
+      "Left bundle branch block",
+      "Atrial fibrillation",
+      "CLBBB"
+    ],
+    "answer": "CLBBB",
+    "ai_answer": "Left bundle branch block",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with Left bundle branch block."
+  },
+  {
+    "id": 8,
+    "ecg_id": "338",
+    "image": "images/ecg_338_84725.png",
+    "options": [
+      "Normal",
+      "Atrial fibrillation",
+      "CLBBB",
+      "Inferior myocardial infarction"
+    ],
+    "answer": "CLBBB",
+    "ai_answer": "Left bundle branch block",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with Left bundle branch block."
+  },
+  {
+    "id": 9,
+    "ecg_id": "3",
+    "image": "images/ecg_3_14041.png",
+    "options": [
+      "Left bundle branch block",
+      "NORM",
+      "Right bundle branch block",
+      "Normal"
+    ],
+    "answer": "NORM",
+    "ai_answer": "Right bundle branch block",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with Right bundle branch block."
+  },
+  {
+    "id": 10,
+    "ecg_id": "5",
+    "image": "images/ecg_5_53387.png",
+    "options": [
+      "Inferior myocardial infarction",
+      "Atrial fibrillation",
+      "Right bundle branch block",
+      "NORM"
+    ],
+    "answer": "NORM",
+    "ai_answer": "Normal",
+    "ai_reason": "Analysis of P-QRS-T morphology shows features consistent with Normal."
+  }
+]
